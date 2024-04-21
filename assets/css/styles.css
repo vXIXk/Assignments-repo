@@ -50,6 +50,7 @@ header {
 .read-more-btn:hover {
       color: var(--main-dark-color);
       background-color: var(--darker-white);
+      cursor: pointer;
 }
 
 .web-n-app {
@@ -85,6 +86,7 @@ header {
 }
 img {
       width: 273px;
+      /* height: 180px; */
       min-width: 100%;
       max-width: 100%;
       min-height: auto;
