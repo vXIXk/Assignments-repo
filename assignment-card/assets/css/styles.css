@@ -20,10 +20,10 @@ body {
       box-sizing: border-box;
       text-align: center;
       line-height: 1.2;
-      padding: 2rem;
+      padding: 2.5rem;
       background-color: #e6edef;
       flex-wrap: wrap;
-      gap: 1.75rem;
+      gap: 2.25rem;
 }
 button {
       cursor: pointer;
@@ -55,7 +55,7 @@ button {
       margin: 1.8rem 6.2rem 1.4rem;
 }
 .fixed-height {
-      height: 194.853px;
+      height: 86.3906px;
       overflow: hidden;
       text-overflow: clip;
 }
