@@ -80,6 +80,14 @@ button {
       padding-bottom: 1rem;
       color: var(--user-card-1__orange-color);
 }
+.uc1-username,
+.uc1-occupation,
+.uc-usernaeme,
+.uc-occupation {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+}
 .uc1-description,
 .uc1-button {
       font-family: Roboto, Verdana, Tahoma, sans-serif;
