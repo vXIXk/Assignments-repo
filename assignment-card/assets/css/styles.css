@@ -39,8 +39,8 @@ button {
 }
 .uc1-pfp,
 .pfp {
-      width: 290px;
-      height: 290px;
+      width: 12.125rem;
+      height: 12.125rem;
       object-fit: cover;
       object-position: left;
 }
