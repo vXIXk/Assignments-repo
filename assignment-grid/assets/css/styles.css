@@ -1,0 +1,226 @@
+html {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17.6px;
+
+      --main-dark-color: #333333;
+      --btn-border-color: #656565;
+      --darker-white: #eaeaea;
+      --bright-blue: #2690d4;
+}
+* {
+      box-sizing: border-box;
+}
+body {
+      line-height: 1.5;
+      text-align: center;
+      background-color: var(--main-dark-color);
+
+      display: grid;
+      grid-template-rows: minmax(25.55rem, auto) 1fr minmax(5.55rem, auto);
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25rem)) 1fr;
+}
+.stretch {
+      grid-column: 1 / 5;
+      display: grid;
+      grid-template-columns: subgrid;
+}
+.middle {
+      grid-column: 2 / 4;
+      padding: 0 2rem 0;
+}
+.half {
+      grid-column: 1 / 5;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+}
+
+header {
+      color: white;
+      line-height: 1.55;
+      background-color: var(--main-dark-color);
+      position: relative;
+      z-index: 0;
+}
+.bg-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url("./../images/pexels-photo-248515.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: center;
+      z-index: -1;
+      filter: opacity(40%);
+}
+h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      padding-top: 5.6rem;
+}
+.head-p {
+      padding-top: 0.95rem;
+}
+.read-more-btn {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      border: var(--btn-border-color) solid thin;
+      background-color: var(--main-dark-color);
+      padding: 1rem 2rem;
+      margin: 1.4rem auto 4rem;
+}
+.read-more-btn:hover {
+      cursor: pointer;
+      color: var(--main-dark-color);
+      background-color: var(--darker-white);
+}
+
+.web-n-app {
+      min-height: 23.2vh;
+      color: var(--main-dark-color);
+      background-color: var(--darker-white);
+}
+.web-n-app--h2,
+.section-h2 {
+      font-size: 1.5em;
+      font-weight: bold;
+}
+.web-n-app--h2 {
+      padding-top: 1.5rem;
+}
+.web-n-app--p {
+      padding: 1.5rem 0 2rem;
+      column-count: 2;
+}
+.cards-article {
+      color: var(--main-dark-color);
+      background-color: var(--main-dark-color);
+}
+.cards-div {
+      display: flex;
+      justify-content: center;
+      align-items: first baseline;
+      padding: 4%;
+      gap: 1.15rem;
+}
+.card {
+      background-color: white;
+      max-width: 15.5rem;
+      display: flex;
+      flex-direction: column;
+      color: inherit;
+}
+img {
+      max-width: 15.5rem;
+      width: 100%;
+}
+.card-h3 {
+      font-size: 1.17em;
+      font-weight: bold;
+      padding: 2.65rem 1.5rem 0;
+}
+.card-p {
+      padding: 2.15rem 1.5rem 2.5rem;
+}
+.parent-section {
+      background-color: white;
+}
+.parent-section section {
+      padding-bottom: 1rem;
+}
+.promo {
+      min-height: 14.25rem;
+      color: var(--main-dark-color);
+}
+.section-h2 {
+      color: inherit;
+      padding: 3.5rem 0 2.5rem;
+}
+.info {
+      min-height: 17.65rem;
+      color: white;
+}
+.info-blue-bg {
+      background-color: var(--bright-blue);
+      padding: 0 1rem;
+}
+.info-dark-bg {
+      background-color: var(--main-dark-color);
+      padding: 0 2rem;
+}
+span {
+      display: inline-block;
+      padding: 2rem 0;
+}
+.mailto {
+      text-decoration: none;
+      color: inherit;
+}
+footer {
+      background-color: black;
+      color: white;
+      padding: 2rem;
+      gap: 2rem;
+}
+.traversy-media {
+      text-decoration: none;
+      color: var(--bright-blue);
+}
+
+@media screen and (max-width: 1000px) {
+      footer {
+            padding: 2rem 1rem;
+      }
+}
+@media screen and (max-width: 915px) {
+      body {
+            grid-template-columns: 1fr 1fr;
+      }
+      .stretch,
+      .middle,
+      .half {
+            grid-column: 1 / 3;
+      }
+      .half {
+            display: block;
+      }
+      .card {
+            width: 33%;
+      }
+      .cards-div {
+            gap: 2%;
+      }
+}
+@media screen and (max-width: 840px) {
+      .cards-div {
+            flex-direction: column;
+            justify-content: first baseline;
+            align-items: center;
+            gap: 1.15rem;
+      }
+      .card {
+            max-width: 100%;
+            width: 100%;
+      }
+      img {
+            max-width: 100%;
+            width: 100%;
+      }
+      .card-p {
+            padding: 2.15rem 3rem 2.5rem;
+      }
+      .info {
+            padding: 0 2rem;
+      }
+      span,
+      footer {
+            font-size: 16px;
+      }
+}
+@media screen and (max-width: 600px) {
+      .web-n-app--p {
+            column-count: 1;
+      }
+}
