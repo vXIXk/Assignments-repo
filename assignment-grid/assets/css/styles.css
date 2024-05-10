@@ -127,7 +127,7 @@ img {
 .parent-section {
       background-color: white;
 }
-.parent-section section {
+.child-section {
       padding-bottom: 1rem;
 }
 .promo {
@@ -222,5 +222,8 @@ footer {
 @media screen and (max-width: 600px) {
       .web-n-app--p {
             column-count: 1;
+      }
+      .child-section {
+            padding-bottom: 2.5rem;
       }
 }
