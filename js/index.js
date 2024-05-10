@@ -15,7 +15,7 @@ const f = 404;
 console.log(e + f);
 
 // ‣4
-let openingStringNumber = "11";
+let openingStringNumber = 11;
 let trueOrFalse = "true";
 let scriptingLanguage = "java script";
 let closingStringNumber = "100";
@@ -35,8 +35,8 @@ num += 11;
 num -= 11;
 num *= 11;
 num /= 11;
-num += 1;
-num -= 1;
+num++;
+num--;
 
 // ‣6
 let userInquiry = Number(prompt("Input a number to raise to its square:"));
