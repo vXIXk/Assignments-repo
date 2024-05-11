@@ -16,7 +16,7 @@ console.log(e + f);
 
 // ‣4
 let openingStringNumber = 11;
-let trueOrFalse = "true";
+const isBoolean = true;
 let scriptingLanguage = "java script";
 let closingStringNumber = "100";
 console.log(
