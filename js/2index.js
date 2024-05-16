@@ -30,3 +30,34 @@ if (userSum >= 800) {
 } else {
       alert(`Сума вашої покупки — ${userSum} грн.`);
 } */
+
+//* Switch..case  1‣
+
+/* const userDay = +prompt("Який сьогодні номер дня тижня?");
+switch (userDay) {
+      case 1:
+            alert("Понеділок");
+            break;
+      case 2:
+            alert("Вівторок");
+            break;
+      case 3:
+            alert("Середа");
+            break;
+      case 4:
+            alert("Четвер");
+            break;
+      case 5:
+            alert("П'ятниця");
+            break;
+      case 6:
+            alert("Субота");
+            break;
+      case 7:
+            alert("Неділя");
+            break;
+      default:
+            alert("Дня тижня з таким номером не існує.");
+} */
+
+//* Switch..case  2‣
