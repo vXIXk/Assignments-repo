@@ -21,10 +21,10 @@
 //* 3‣ Користувач вводить суму покупки.
 
 /* const userSum = +prompt("Введіть суму покупки:");
-if (userSum >= 800) {
+if (userSum > 800) {
       let sum = userSum - userSum * 0.05;
       alert(`Сума вашої покупки — ${sum} грн.`);
-} else if (userSum < 800 && userSum >= 500) {
+} else if (userSum <= 800 && userSum > 500) {
       let sum = userSum - userSum * 0.03;
       alert(`Сума вашої покупки — ${sum} грн.`);
 } else {
