@@ -61,3 +61,17 @@ switch (userDay) {
 } */
 
 //* Switch..case  2‣
+
+for (day = 1; day <= 31; day++) {
+      switch (true) {
+            case day <= 10:
+                  console.log(day + " число:   Перша декада.");
+                  break;
+            case day > 10 && day <= 20:
+                  console.log(day + " число:   Друга декада.");
+                  break;
+            case day > 20 && day <= 31:
+                  console.log(day + " число:   Третя декада.");
+                  break;
+      }
+}
