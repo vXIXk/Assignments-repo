@@ -31,6 +31,8 @@ if (userSum > 800) {
       alert(`Сума вашої покупки — ${userSum} грн.`);
 } */
 
+//* 4‣*
+
 //* Switch..case  1‣
 
 /* const userDay = +prompt("Який сьогодні номер дня тижня?");
@@ -60,9 +62,9 @@ switch (userDay) {
             alert("Дня тижня з таким номером не існує.");
 } */
 
-//* Switch..case  2‣
+//* Switch..case  2‣*
 
-for (day = 1; day <= 31; day++) {
+/* for (day = 1; day <= 31; day++) {
       switch (true) {
             case day <= 10:
                   console.log(day + " число:   Перша декада.");
@@ -74,4 +76,4 @@ for (day = 1; day <= 31; day++) {
                   console.log(day + " число:   Третя декада.");
                   break;
       }
-}
+} */
