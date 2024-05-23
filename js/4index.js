@@ -75,6 +75,18 @@ function rAreaCalc(A, B, C, D) {
 //       +prompt("The length of the fourth edge D:")
 // );
 
+//* □6 Реалізувати функцію, що перевірятиме надане число на простоту.
+
+function isPrime(number) {
+      for (let div = 2; div <= Math.sqrt(number); div++) {
+            if (number % div === 0 || number <= 1) {
+                  return alert(false);
+            }
+      }
+      alert(true);
+}
+// isPrime(+prompt("Input your number:"));
+
 //* □7   Сформувати картку продукту.
 
 /**
