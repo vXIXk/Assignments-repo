@@ -19,7 +19,7 @@ const checkMultiplicity = function (divident, divisor) {
 
 const isTriangle = function (K, M, P) {
       alert("Is this a legit polygon?");
-      return alert(
+      alert(
             K > 0 && M > 0 && P > 0 && K + M > P && P + K > M && M + P > K
                   ? true
                   : false
