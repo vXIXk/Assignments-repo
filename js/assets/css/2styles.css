@@ -1,0 +1,33 @@
+html {
+      font-family: sans-serif;
+      font-size: 18px;
+}
+body {
+      box-sizing: border-box;
+      padding: 0.5rem;
+      background-color: #000033;
+}
+header {
+      display: flex;
+      justify-content: space-between;
+      gap: 60%;
+}
+.logo {
+      max-height: 10rem;
+      border-radius: 50%;
+}
+.flex-box {
+      padding: 0 1rem 1rem;
+}
+.pfp {
+      max-height: 5rem;
+      border-radius: 50%;
+}
+.pfp-wrapper {
+      display: inline-block;
+}
+.username {
+      color: white;
+      text-align: center;
+      margin: 0;
+}

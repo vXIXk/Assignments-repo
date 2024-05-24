@@ -33,6 +33,15 @@ if (userSum > 800) {
 
 //* 4‣*
 
+let isLogin = true;
+isMale = false;
+
+if (!isMale) {
+      let color = document.querySelector(".pfp-wrapper");
+      color.style.cssText =
+            "height:5rem; width:5rem; border-radius:50%; overflow:hidden; border: 3px solid red";
+}
+
 //* Switch..case  1‣
 
 /* const userDay = +prompt("Який сьогодні номер дня тижня?");
