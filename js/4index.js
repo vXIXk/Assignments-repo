@@ -2,8 +2,9 @@
 
 // isWorkingAgePerson(+prompt("Please, input your age here:"));
 function isWorkingAgePerson(age) {
-      console.log(age >= 16 && age <= 64 ? true : false);
+      return age >= 16 && age <= 64;
 }
+// console.log(isWorkingAgePerson());
 
 //* □2   Реалізували перевірку на ділення без остачі.
 
@@ -78,14 +79,22 @@ function rAreaCalc(A, B, C, D) {
 //* □6 Реалізувати функцію, що перевірятиме надане число на простоту.
 
 function isPrime(number) {
-      for (let div = 2; div <= Math.sqrt(number); div++) {
-            if (number % div === 0 || number <= 1) {
-                  return alert(false);
+      if (number >= 1) {
+            for (let div = 2; div <= Math.sqrt(number); div++) {
+                  if (number % div === 0) {
+                        return alert(false);
+                  }
             }
       }
       alert(true);
+      // for (let div = 2; div <= Math.sqrt(number); div++) {
+      //       if (number % div === 0 || number <= 1) {
+      //             return alert(false);
+      //       }
+      // }
+      // alert(true);
 }
-// isPrime(+prompt("Input your number:"));
+isPrime(+prompt("Input your number:"));
 
 //* □7   Сформувати картку продукту.
 
@@ -107,7 +116,7 @@ function productCard(
       discountPrice
 ) {
       document.write(
-            `<img style="max-width:20rem;" src="${productImg}">
+            `<img style="max-width:20rem;" src="${productImg}"; alt="Зображення товару: ${productName}">
           <h1>${productName}</h1>
           <p style="font-weight:bold">${productDescr}</p>
           <p class="standart-price">${price} ₴</p>`
@@ -119,14 +128,14 @@ function productCard(
             document.write(`<p>${discountPrice} ₴</p>`);
             const discount = (price - discountPrice) / (price / 100);
             document.write(
-                  `<p style="font-weight:bold; color:red">Знижка ${discount}%!</p>`
+                  `<p style="font-weight:bold; color:red">Знижка ${discount}%!!!</p>`
             );
       }
 }
 // productCard(
-//     "https://content2.rozetka.com.ua/goods/images/big/140069588.jpg",
-//     "Ігрова консоль Sony PlayStation 4 Slim 500GB Black",
-//     "Поринь у світ гри спільно з Sony PlayStation 4 Slim 500GB Black. Консоль 8 покоління легко відкриє двері до найрізноманітніших пригод та ігрових сюжетів.",
-//     13700,
-//     11645
+//       "https://gmedia.playstation.com/is/image/SIEPDC/ps4-product-thumbnail-01-en-14sep21?$facebook$",
+//       "Ігрова консоль Sony PlayStation 4 Slim 500GB Black",
+//       "Поринь у світ гри спільно з Sony PlayStation 4 Slim 500GB Black. Консоль 8 покоління легко відкриє двері до найрізноманітніших пригод та ігрових сюжетів.",
+//       13700,
+//       11645
 // );
