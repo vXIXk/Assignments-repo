@@ -13,9 +13,7 @@ const customer = {
             apartment: "№4",
       },
       getAddress() {
-            console.log(
-                  `${this.address.city}, ${this.address.street},\n${this.address.house}, ${this.address.apartment}`
-            );
+            return `${this.address.city}, ${this.address.street}, ${this.address.house}, ${this.address.apartment}`;
       },
       changePhoneNumber(newPhoneNumber) {
             this.phoneNumber = newPhoneNumber;
@@ -23,7 +21,7 @@ const customer = {
 };
 // customer.changePhoneNumber(prompt("Input your new phone number here."));
 customer.isMale = true;
-delete customer.address;
+// delete customer.address;
 const cstmrCopy1 = Object.assign({}, customer);
 const cstmrCopy2 = { ...customer };
 
@@ -57,13 +55,13 @@ PrintedWork.prototype.calcAge = function () {
 PrintedWork.prototype.changePrice = function (newPrice) {
       this.price = newPrice;
 };
-const book1 = new PrintedWork(
-      "F. Scott Fitzgerald",
-      "The Great Gatsby",
-      1925,
-      {
-            city: "New York",
-            name: "C. Scribner's Sons",
-      },
-      3.7 + "$"
-);
+// const book1 = new PrintedWork(
+//       "F. Scott Fitzgerald",
+//       "The Great Gatsby",
+//       1925,
+//       {
+//             city: "New York",
+//             name: "C. Scribner's Sons",
+//       },
+//       3.7 + "$"
+// );
