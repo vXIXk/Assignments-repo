@@ -87,7 +87,7 @@ const smartphones = [
             model: "Nord 2",
             color: "Blue Haze",
             ram: 12,
-            isNfc: true,
+            isNfc: false,
             price: 16799,
       },
       {
@@ -138,23 +138,18 @@ const smartphones = [
 ];
 
 for (const item of smartphones) {
-      document.write(`<article class="item-card">
+      document.write(`
+      <article class="item-card">
             <header>
                   <h2 class="item-h2">${item.brand} ${item.model}</h2>
             </header>
             <section>
                   <p class="item-p">Color: ${item.color}</p>
-                  <p class="item-p">${item.ram}GB RAM</p>`);
-      if (item.isNfc) {
-            document.write(`
-                  <p>NFC: ✓</p>`);
-      } else {
-            document.write(`
-                  <p>NFC: —</p>`);
-      }
-      document.write(`
+                  <p class="item-p">${item.ram}GB RAM</p>
+                  <p>NFC: ${item.isNfc ? "✓" : "—"}</p>
                   <p class="item-p">₴${item.price}</p>
-            </section></article>`);
+            </section>
+      </article>`);
 }
 
 //* №6.2 || №7
@@ -207,5 +202,5 @@ console.log(numbers.every(isPrime));
 
 //* №13
 
-const isNegative = arg => -arg >= 1;
+const isNegative = arg => arg < 0;
 console.log(numbers.some(isNegative));
