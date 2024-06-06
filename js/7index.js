@@ -26,7 +26,7 @@ console.log(users);
 //* №0
 
 User.prototype.getFullName = function () {
-      this.fullName = `${this.firstName} ${this.lastName}`;
+      return `${this.firstName} ${this.lastName}`;
 };
 const pullFullName = el => {
       el.getFullName();
@@ -43,13 +43,12 @@ users.forEach(pullFullName);
 
 //* №3
 
-const schoolAgeFemales = users.filter(
-      el => !el.isMale && el.age < 18 && el.age >= 6
-);
-const girlsNames = schoolAgeFemales.map(el => {
-      el.getFullName();
-      return el.fullName;
-});
+const schoolAgeFemales = users
+      .filter(el => !el.isMale && el.age < 18 && el.age >= 6)
+      .map(el => {
+            el.getFullName();
+            return el.fullName;
+      });
 
 //* №4
 
