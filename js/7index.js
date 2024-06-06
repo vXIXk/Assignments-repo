@@ -28,10 +28,7 @@ console.log(users);
 User.prototype.getFullName = function () {
       return `${this.firstName} ${this.lastName}`;
 };
-const pullFullName = el => {
-      el.getFullName();
-      console.log(el.fullName);
-};
+const pullFullName = el => console.log(el.getFullName());
 
 //* №1
 

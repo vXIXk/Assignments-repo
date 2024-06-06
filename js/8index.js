@@ -125,7 +125,7 @@ class Post {
                         <ul class="hashtags" style="list-style:none; display:flex; gap:1rem">`);
             for (const el of hashtags) {
                   document.write(`
-                              <li><a href="" style="text-decoration:none; color:inherit">${el}</a></li`);
+                              <li><a href="" style="text-decoration:none; color:inherit">${el}</a></li>`);
             }
             document.write(`
                         </ul>
@@ -147,7 +147,7 @@ const posts = [
                   `https://i.pinimg.com/564x/cc/45/a3/cc45a3b373d65a36186d044883ecf2ce.jpg`,
                   `https://i.pinimg.com/564x/63/e4/4c/63e44c9263f6b29a76aefad90a0d26be.jpg`,
             ],
-            [],
+            ["#wfeghrfjkghj", "#dfghjkl"],
             4,
             1
       ),
@@ -166,4 +166,4 @@ const posts = [
       ),
 ];
 
-// posts.forEach(el => el.render(el));
+posts.forEach(el => el.render(el));
