@@ -1,5 +1,37 @@
 "use strict";
 
+//* options for hashtags:
+const options = [
+      undefined,
+      "#fullstack",
+      "#backend",
+      "#frontend",
+      "#web",
+      "#html",
+      "#css",
+      "#script",
+      "#javascript",
+      "#js",
+      "#json",
+      "#react",
+      "#coding",
+      "#devving",
+      "#work",
+      "#education",
+      "#lesson",
+      "#somethingNew",
+      "#continue",
+      "#break",
+      "#coffee",
+      "#java",
+      "#positivity",
+      "#humor",
+      "#motivation",
+      "#discussion",
+      "#helpNeeded",
+      "#idea",
+];
+
 class Post {
       constructor(
             id,
@@ -22,38 +54,74 @@ class Post {
             this.likesCount = likesCount;
             this.dislikesCount = dislikesCount;
       }
+
+      set hashtags(value) {
+            try {
+                  if (value.length > 6) {
+                        throw new RangeError(
+                              "Posts can be assigned only up to 6 hashtags."
+                        );
+                  }
+                  for (const el of value) {
+                        if (!options.includes(el)) {
+                              throw new RangeError(
+                                    "The 'hashtags' property values can't be custom."
+                              );
+                        }
+                  }
+
+                  this._hashtags = value;
+            } catch (err) {
+                  console.log(err);
+            }
+      }
+
       set likesCount(value) {
-            if (typeof value !== "number" || !Number.isInteger(value)) {
-                  throw new TypeError(
-                        "The 'likesCount' property value must be integer."
-                  );
+            try {
+                  if (typeof value !== "number" || !Number.isInteger(value)) {
+                        throw new TypeError(
+                              "The 'likesCount' property value must be integer."
+                        );
+                  }
+                  if (value < 0) {
+                        throw new RangeError(
+                              "The 'likesCount' property value can't be negative."
+                        );
+                  }
+                  this._likesCount = value;
+            } catch (err) {
+                  console.log(err);
             }
-            if (value < 0) {
-                  throw new RangeError(
-                        "The 'likesCount' property value can't be negative."
-                  );
+      }
+
+      set dislikesCount(value) {
+            try {
+                  if (typeof value !== "number" || !Number.isInteger(value)) {
+                        throw new TypeError(
+                              "The 'dislikesCount' property value must be integer."
+                        );
+                  }
+                  if (value < 0) {
+                        throw new RangeError(
+                              "The 'dislikesCount' property value can't be negative."
+                        );
+                  }
+                  this._dislikesCount = value;
+            } catch (err) {
+                  console.log(err);
             }
-            this._likesCount = value;
+      }
+
+      get hashtags() {
+            return this._hashtags;
       }
       get likesCount() {
             return this._likesCount;
       }
-      set dislikesCount(value) {
-            if (typeof value !== "number" || !Number.isInteger(value)) {
-                  throw new TypeError(
-                        "The 'dislikesCount' property value must be integer."
-                  );
-            }
-            if (value < 0) {
-                  throw new RangeError(
-                        "The 'dislikesCount' property value can't be negative."
-                  );
-            }
-            this._dislikesCount = value;
-      }
       get dislikesCount() {
             return this._dislikesCount;
       }
+
       editTitle() {
             return `Edited :>> ${(this.title = prompt(
                   "A fitter title in mind?"
@@ -64,49 +132,61 @@ class Post {
                   "Here goes brand new body text."
             ))}`;
       }
+
       touchLikes(sign) {
-            if (sign === "-" && this._likesCount < 1) {
-                  throw new RangeError(
-                        "The 'likesCount' property value can't be negative."
-                  );
-            }
-            if (sign === "+") {
-                  return `Likes :>> ${++this._likesCount}`;
-            } else if (sign === "-") {
-                  return `Likes :>> ${--this._likesCount}`;
-            } else {
-                  throw new RangeError(
-                        "Acceptable operation must be either addition or substraction."
-                  );
+            try {
+                  if (sign === "-" && this._likesCount < 1) {
+                        throw new RangeError(
+                              "The 'likesCount' property value can't be negative."
+                        );
+                  }
+                  if (sign === "+") {
+                        return `Likes :>> ${++this._likesCount}`;
+                  } else if (sign === "-") {
+                        return `Likes :>> ${--this._likesCount}`;
+                  } else {
+                        throw new RangeError(
+                              "Acceptable operation must be either addition or substraction."
+                        );
+                  }
+            } catch (err) {
+                  console.log(err);
             }
       }
       touchDislikes(sign) {
-            if (sign === "-" && this._dislikesCount < 1) {
-                  throw new RangeError(
-                        "The 'dislikesCount' property value can't be negative."
-                  );
-            }
-            if (sign === "+") {
-                  return `Dislikes :>> ${++this._dislikesCount}`;
-            } else if (sign === "-") {
-                  return `Dislikes :>> ${--this._dislikesCount}`;
-            } else {
-                  throw new RangeError(
-                        "Acceptable operation must be either addition or substraction."
-                  );
+            try {
+                  if (sign === "-" && this._dislikesCount < 1) {
+                        throw new RangeError(
+                              "The 'dislikesCount' property value can't be negative."
+                        );
+                  }
+                  if (sign === "+") {
+                        return `Dislikes :>> ${++this._dislikesCount}`;
+                  } else if (sign === "-") {
+                        return `Dislikes :>> ${--this._dislikesCount}`;
+                  } else {
+                        throw new RangeError(
+                              "Acceptable operation must be either addition or substraction."
+                        );
+                  }
+            } catch (err) {
+                  console.log(err);
             }
       }
-      render({
-            title,
-            poster,
-            date,
-            body,
-            images,
-            hashtags,
-            likesCount: likes,
-            dislikesCount: dislikes,
-      }) {
-            document.write(`
+
+      render() {
+            try {
+                  const {
+                        title,
+                        poster,
+                        date,
+                        body,
+                        images,
+                        hashtags,
+                        likesCount: likes,
+                        dislikesCount: dislikes,
+                  } = this;
+                  document.write(`
             <article style="margin-bottom: 10rem">
                   <header>
                         <h2>${title}</h2>
@@ -115,24 +195,33 @@ class Post {
                   </header>
                   <section>
                         <p>${body}</p>
-                        <ul class="images" style="list-style:none; display:flex; gap:1rem">`);
-            for (const el of images) {
-                  document.write(`
-                              <li><img src="${el}" /></li>`);
-            }
-            document.write(`
+                        <ul class="images" style="list-style:none; display:flex; gap:1rem">
+                              ${images
+                                    .map(el => `<li><img src="${el}" /></li>`)
+                                    .join(" ")}
                         </ul>
-                        <ul class="hashtags" style="list-style:none; display:flex; gap:1rem">`);
-            for (const el of hashtags) {
-                  document.write(`
-                              <li><a href="" style="text-decoration:none; color:inherit">${el}</a></li>`);
-            }
-            document.write(`
+                        <ul class="hashtags" style="list-style:none; display:flex; gap:1rem">
+                              ${hashtags
+                                    .map(
+                                          el =>
+                                                `<li><a href="" style="text-decoration:none; color:inherit">${el}</a></li>`
+                                    )
+                                    .join(" ")}
                         </ul>
                         <button disabled><i class="fa-regular fa-thumbs-up"></i> ${likes}</button>
                         <button disabled><i class="fa-regular fa-thumbs-down"></i> ${dislikes}</button>
                   </section>
             </article>`);
+            } catch (err) {
+                  console.log(`
+► Uncaught
+TypeError: Cannot read properties of undefined (reading 'map')
+at Post.render (8index.js:187:38)
+at 8index.js:230:24
+at Array.forEach (<anonymous>)
+at 8index.js:230:7
+                  `);
+            }
       }
 }
 
@@ -147,7 +236,7 @@ const posts = [
                   `https://i.pinimg.com/564x/cc/45/a3/cc45a3b373d65a36186d044883ecf2ce.jpg`,
                   `https://i.pinimg.com/564x/63/e4/4c/63e44c9263f6b29a76aefad90a0d26be.jpg`,
             ],
-            ["#wfeghrfjkghj", "#dfghjkl"],
+            ["#motivation"],
             4,
             1
       ),
@@ -160,7 +249,7 @@ const posts = [
             [
                   `https://i.pinimg.com/originals/61/5d/8e/615d8e937751d65c8a8399e6410a8b1a.gif`,
             ],
-            ["#coffee", "#break", "#:P"],
+            ["#coffee", "#java", "#break"],
             21,
             3
       ),

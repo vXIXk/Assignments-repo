@@ -43,8 +43,7 @@ users.forEach(pullFullName);
 const schoolAgeFemales = users
       .filter(el => !el.isMale && el.age < 18 && el.age >= 6)
       .map(el => {
-            el.getFullName();
-            return el.fullName;
+            pullFullName(el);
       });
 
 //* №4
