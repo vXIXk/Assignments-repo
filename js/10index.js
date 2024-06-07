@@ -135,15 +135,15 @@ class Post {
 
       touchLikes(sign) {
             try {
-                  if (sign === "-" && this._likesCount < 1) {
+                  if (sign === "-" && this.likesCount < 1) {
                         throw new RangeError(
                               "The 'likesCount' property value can't be negative."
                         );
                   }
                   if (sign === "+") {
-                        return `Likes :>> ${++likesCount}`;
+                        return `Likes :>> ${++this.likesCount}`;
                   } else if (sign === "-") {
-                        return `Likes :>> ${--likesCount}`;
+                        return `Likes :>> ${--this.likesCount}`;
                   } else {
                         throw new RangeError(
                               "Acceptable operation must be either addition or substraction."
@@ -155,15 +155,15 @@ class Post {
       }
       touchDislikes(sign) {
             try {
-                  if (sign === "-" && dislikesCount < 1) {
+                  if (sign === "-" && this.dislikesCount < 1) {
                         throw new RangeError(
                               "The 'dislikesCount' property value can't be negative."
                         );
                   }
                   if (sign === "+") {
-                        return `Dislikes :>> ${++dislikesCount}`;
+                        return `Dislikes :>> ${++this.dislikesCount}`;
                   } else if (sign === "-") {
-                        return `Dislikes :>> ${--dislikesCount}`;
+                        return `Dislikes :>> ${--this.dislikesCount}`;
                   } else {
                         throw new RangeError(
                               "Acceptable operation must be either addition or substraction."
