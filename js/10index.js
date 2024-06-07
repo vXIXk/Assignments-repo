@@ -307,3 +307,5 @@ class RangeValidator {
             }
       }
 }
+
+const range = new RangeValidator(0, 100);
