@@ -141,9 +141,9 @@ class Post {
                         );
                   }
                   if (sign === "+") {
-                        return `Likes :>> ${++this._likesCount}`;
+                        return `Likes :>> ${++likesCount}`;
                   } else if (sign === "-") {
-                        return `Likes :>> ${--this._likesCount}`;
+                        return `Likes :>> ${--likesCount}`;
                   } else {
                         throw new RangeError(
                               "Acceptable operation must be either addition or substraction."
@@ -155,15 +155,15 @@ class Post {
       }
       touchDislikes(sign) {
             try {
-                  if (sign === "-" && this._dislikesCount < 1) {
+                  if (sign === "-" && dislikesCount < 1) {
                         throw new RangeError(
                               "The 'dislikesCount' property value can't be negative."
                         );
                   }
                   if (sign === "+") {
-                        return `Dislikes :>> ${++this._dislikesCount}`;
+                        return `Dislikes :>> ${++dislikesCount}`;
                   } else if (sign === "-") {
-                        return `Dislikes :>> ${--this._dislikesCount}`;
+                        return `Dislikes :>> ${--dislikesCount}`;
                   } else {
                         throw new RangeError(
                               "Acceptable operation must be either addition or substraction."
