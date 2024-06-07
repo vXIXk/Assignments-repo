@@ -213,14 +213,7 @@ class Post {
                   </section>
             </article>`);
             } catch (err) {
-                  console.log(`
-► Uncaught
-TypeError: Cannot read properties of undefined (reading 'map')
-at Post.render (8index.js:187:38)
-at 8index.js:230:24
-at Array.forEach (<anonymous>)
-at 8index.js:230:7
-                  `);
+                  console.log(err);
             }
       }
 }
