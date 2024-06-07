@@ -91,6 +91,7 @@ class Post {
                   this._likesCount = value;
             } catch (err) {
                   console.log(err);
+                  this._likesCount = " ";
             }
       }
 
@@ -109,6 +110,7 @@ class Post {
                   this._dislikesCount = value;
             } catch (err) {
                   console.log(err);
+                  this._dislikesCount = " ";
             }
       }
 
@@ -249,3 +251,59 @@ const posts = [
 ];
 
 posts.forEach(el => el.render(el));
+
+class RangeValidator {
+      constructor(from, to) {
+            this.from = from;
+            this.to = to;
+      }
+
+      set from(value) {
+            try {
+                  if (typeof value !== "number") {
+                        throw new TypeError("Range limits must be numbers.");
+                  }
+                  this._from = value;
+            } catch (err) {
+                  console.log(err);
+            }
+      }
+      set to(value) {
+            try {
+                  if (typeof value !== "number") {
+                        throw new TypeError("Range limits must be numbers.");
+                  }
+                  if (value < this._from) {
+                        throw new RangeError(
+                              "The lower range limit can't be greater or equal to the upper range limit."
+                        );
+                  }
+                  this._to = value;
+            } catch (err) {
+                  console.log(err);
+            }
+      }
+
+      get from() {
+            return this._from;
+      }
+      get to() {
+            return this._to;
+      }
+      get range() {
+            return [this._from, this._to];
+      }
+
+      isValid(number) {
+            try {
+                  if (typeof number !== "number") {
+                        throw new TypeError(
+                              "The value to validate must be a number."
+                        );
+                  }
+                  return number >= this.from && number <= this.to;
+            } catch (err) {
+                  console.log(err);
+            }
+      }
+}
