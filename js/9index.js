@@ -42,7 +42,7 @@ class Post {
             images,
             hashtags,
             likesCount,
-            dislikesCount
+            dislikesCount,
       ) {
             this.id = id;
             this.title = title;
@@ -59,20 +59,20 @@ class Post {
             try {
                   if (value.length > 6) {
                         throw new RangeError(
-                              "Posts can be assigned only up to 6 hashtags."
+                              "Posts can be assigned only up to 6 hashtags.",
                         );
                   }
                   for (const el of value) {
                         if (!options.includes(el)) {
                               throw new RangeError(
-                                    "The 'hashtags' property values can't be custom."
+                                    "The 'hashtags' property values can't be custom.",
                               );
                         }
                   }
 
                   this._hashtags = value;
             } catch (err) {
-                  console.log(err);
+                  return err;
             }
       }
 
@@ -80,17 +80,17 @@ class Post {
             try {
                   if (typeof value !== "number" || !Number.isInteger(value)) {
                         throw new TypeError(
-                              "The 'likesCount' property value must be integer."
+                              "The 'likesCount' property value must be integer.",
                         );
                   }
                   if (value < 0) {
                         throw new RangeError(
-                              "The 'likesCount' property value can't be negative."
+                              "The 'likesCount' property value can't be negative.",
                         );
                   }
                   this._likesCount = value;
             } catch (err) {
-                  console.log(err);
+                  return err;
                   this._likesCount = " ";
             }
       }
@@ -99,17 +99,17 @@ class Post {
             try {
                   if (typeof value !== "number" || !Number.isInteger(value)) {
                         throw new TypeError(
-                              "The 'dislikesCount' property value must be integer."
+                              "The 'dislikesCount' property value must be integer.",
                         );
                   }
                   if (value < 0) {
                         throw new RangeError(
-                              "The 'dislikesCount' property value can't be negative."
+                              "The 'dislikesCount' property value can't be negative.",
                         );
                   }
                   this._dislikesCount = value;
             } catch (err) {
-                  console.log(err);
+                  return err;
                   this._dislikesCount = " ";
             }
       }
@@ -126,12 +126,12 @@ class Post {
 
       editTitle() {
             return `Edited :>> ${(this.title = prompt(
-                  "A fitter title in mind?"
+                  "A fitter title in mind?",
             ))}`;
       }
       editBody() {
             return `Edited :>> ${(this.body = prompt(
-                  "Here goes brand new body text."
+                  "Here goes brand new body text.",
             ))}`;
       }
 
@@ -139,7 +139,7 @@ class Post {
             try {
                   if (sign === "-" && this.likesCount < 1) {
                         throw new RangeError(
-                              "The 'likesCount' property value can't be negative."
+                              "The 'likesCount' property value can't be negative.",
                         );
                   }
                   if (sign === "+") {
@@ -148,18 +148,18 @@ class Post {
                         return `Likes :>> ${--this.likesCount}`;
                   } else {
                         throw new RangeError(
-                              "Acceptable operation must be either addition or substraction."
+                              "Acceptable operation must be either addition or substraction.",
                         );
                   }
             } catch (err) {
-                  console.log(err);
+                  return err;
             }
       }
       touchDislikes(sign) {
             try {
                   if (sign === "-" && this.dislikesCount < 1) {
                         throw new RangeError(
-                              "The 'dislikesCount' property value can't be negative."
+                              "The 'dislikesCount' property value can't be negative.",
                         );
                   }
                   if (sign === "+") {
@@ -168,11 +168,11 @@ class Post {
                         return `Dislikes :>> ${--this.dislikesCount}`;
                   } else {
                         throw new RangeError(
-                              "Acceptable operation must be either addition or substraction."
+                              "Acceptable operation must be either addition or substraction.",
                         );
                   }
             } catch (err) {
-                  console.log(err);
+                  return err;
             }
       }
 
@@ -206,7 +206,7 @@ class Post {
                               ${hashtags
                                     .map(
                                           el =>
-                                                `<li><a href="" style="text-decoration:none; color:inherit">${el}</a></li>`
+                                                `<li><a href="" style="text-decoration:none; color:inherit">${el}</a></li>`,
                                     )
                                     .join(" ")}
                         </ul>
@@ -215,7 +215,7 @@ class Post {
                   </section>
             </article>`);
             } catch (err) {
-                  console.log(err);
+                  return err;
             }
       }
 }
@@ -233,7 +233,7 @@ const posts = [
             ],
             ["#motivation"],
             4,
-            1
+            1,
       ),
       new Post(
             19,
@@ -246,7 +246,7 @@ const posts = [
             ],
             ["#coffee", "#java", "#break"],
             21,
-            3
+            3,
       ),
 ];
 
@@ -265,7 +265,7 @@ class RangeValidator {
                   }
                   this._from = value;
             } catch (err) {
-                  console.log(err);
+                  return err;
             }
       }
       set to(value) {
@@ -275,12 +275,12 @@ class RangeValidator {
                   }
                   if (value < this._from) {
                         throw new RangeError(
-                              "The lower range limit can't be greater or equal to the upper range limit."
+                              "The lower range limit can't be greater or equal to the upper range limit.",
                         );
                   }
                   this._to = value;
             } catch (err) {
-                  console.log(err);
+                  return err;
             }
       }
 
@@ -298,12 +298,12 @@ class RangeValidator {
             try {
                   if (typeof number !== "number") {
                         throw new TypeError(
-                              "The value to validate must be a number."
+                              "The value to validate must be a number.",
                         );
                   }
                   return number >= this.from && number <= this.to;
             } catch (err) {
-                  console.log(err);
+                  return err;
             }
       }
 }
