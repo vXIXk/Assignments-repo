@@ -72,7 +72,7 @@ class Post {
 
                   this._hashtags = value;
             } catch (err) {
-                  return err;
+                  console.log(err);
             }
       }
 
@@ -90,7 +90,7 @@ class Post {
                   }
                   this._likesCount = value;
             } catch (err) {
-                  return err;
+                  console.log(err);
                   this._likesCount = " ";
             }
       }
@@ -109,7 +109,7 @@ class Post {
                   }
                   this._dislikesCount = value;
             } catch (err) {
-                  return err;
+                  console.log(err);
                   this._dislikesCount = " ";
             }
       }
@@ -265,7 +265,7 @@ class RangeValidator {
                   }
                   this._from = value;
             } catch (err) {
-                  return err;
+                  console.log(err);
             }
       }
       set to(value) {
@@ -280,7 +280,7 @@ class RangeValidator {
                   }
                   this._to = value;
             } catch (err) {
-                  return err;
+                  console.log(err);
             }
       }
 
