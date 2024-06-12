@@ -50,9 +50,7 @@ function validateEmail(email) {
 try {
       console.log(validateEmail("vlada.kostenko.19@gmail.com"));
 } catch (err) {
-      console.log(`${err}
-
-      This is not a valid E-mail address.`);
+      console.log(err);
 }
 
 //* Closure
