@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 //* Recursion
 // Task 1
@@ -42,7 +42,7 @@ function validateEmail(email) {
       if (!email.includes("@")) {
             throw new Error("An email address must include the at sign (@).");
       }
-      if (email.indexOf("@") === 0 || email.indexOf("@") === email.length--) {
+      if (email.indexOf("@") === 0 || email.indexOf("@") === email.length - 1) {
             throw new Error("Incorrect use of the at sign (@).");
       }
       return `${email} is a valid E-mail address`;
@@ -65,6 +65,6 @@ function count(number, step) {
 }
 const counter = count(number, step);
 
-for (let i = 0; i <= 1000; i++) {
+for (let i = 1; i <= 1000; i++) {
       console.log(counter());
 }
