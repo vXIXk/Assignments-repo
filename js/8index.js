@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 //* Recursion
 // Task 1
@@ -28,7 +28,7 @@ function pow(base, exponent) {
 try {
       console.log(pow(19, 2));
 } catch (err) {
-      return err;
+      console.log(err);
 }
 
 // Task 2
@@ -48,11 +48,11 @@ function validateEmail(email) {
       return `${email} is a valid E-mail address`;
 }
 try {
-      console.log(validateEmail(`vlada.kostenko.19@gmail.com`));
+      console.log(validateEmail("vlada.kostenko.19@gmail.com"));
 } catch (err) {
-      return `${err}
+      console.log(`${err}
 
-      ${email} is not a valid E-mail address.`;
+      This is not a valid E-mail address.`);
 }
 
 //* Closure
