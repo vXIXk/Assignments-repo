@@ -1,0 +1,9 @@
+body {
+      padding: 0.5rem;
+}
+#click-me {
+      display: block;
+      font-size: large;
+      padding: 2rem;
+      margin: 0 0 1rem;
+}
