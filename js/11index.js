@@ -60,7 +60,6 @@ class PassengerTransport extends Vehicle {
       }
 
       addPassenger() {
-            // Ternary operator only return undefined here (& in the checkLoadingPossibility). Why?
             if (this.passengerCount + 1 > this.passengerLimit) {
                   return false;
             }
@@ -85,10 +84,7 @@ class FreightTransport extends Vehicle {
       }
 
       checkLoadingPossibility(weight) {
-            if (weight > this.capacity) {
-                  return false;
-            }
-            return true;
+            return weight <= this.capacity;
       }
 }
 
