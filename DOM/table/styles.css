@@ -1,0 +1,63 @@
+html {
+      --calm: white;
+      --light-air: #aef1f9;
+      --light-breeze: #96f7dc;
+      --gentle-breeze: #96f7b4;
+      --moderate-breeze: #6ff46f;
+      --fresh-breeze: #73ed12;
+      --strong-breeze: #a4ed12;
+      --near-gale: #daed12;
+      --gale: #edc212;
+      --strong-gale: #ed8f12;
+      --storm: #ed6312;
+      --violent-storm: #ed2912;
+      --hurricane-force: #d5102d;
+
+      font-family: "Inconsolata", monospace;
+      font-size: 24px;
+}
+* {
+      box-sizing: border-box;
+}
+
+body {
+      padding: 2rem;
+      background-color: #fafafa;
+}
+
+table {
+      margin: auto;
+      text-align: center;
+      letter-spacing: 1px;
+      color: #3f3f3f;
+}
+table,
+th,
+td {
+      padding: 3rem 4rem;
+      border: 2px solid #fafafa;
+}
+
+th {
+      background-color: #c1c1c1;
+      font-weight: 500;
+}
+
+td {
+      background-color: #f2f2f2;
+}
+
+.date {
+      background-color: #d3d3d3;
+      font-weight: 300;
+}
+
+.beaufort,
+.date {
+      max-width: 12rem;
+}
+
+.points-cell {
+      color: black;
+      font-weight: 500;
+}
