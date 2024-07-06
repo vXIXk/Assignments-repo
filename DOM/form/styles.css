@@ -1,0 +1,101 @@
+* {
+      box-sizing: border-box;
+}
+html {
+      font-family: "Mukta Malar", sans-serif;
+}
+body {
+      padding: 0.5rem;
+      background: url("https://wallpapers.com/images/hd/beach-photography-4480-x-2520-wallpaper-0216cppy42x0imk0.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #076a4b;
+}
+
+section {
+      margin: 4rem auto;
+      min-height: 75vh;
+      max-width: 75vw;
+      box-shadow: 0 0 1.5rem black;
+      border-radius: 0.1rem;
+      padding: 4rem 3.5rem;
+      color: white;
+}
+
+h1 {
+      font-weight: 900;
+      font-size: 2rem;
+}
+p {
+      margin: 1.5rem 0 3rem;
+}
+
+form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+}
+label,
+.user-name,
+.phone-number {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+}
+
+.label-caption {
+      flex: 0 1 10rem;
+}
+.form-input,
+.user-name,
+.phone-number,
+textarea {
+      flex: 1 1 5rem;
+}
+
+.form-input,
+button {
+      font-family: inherit;
+      font-size: inherit;
+      background: transparent;
+}
+.form-input {
+      border: none;
+      padding: 0 1rem;
+}
+::placeholder {
+      color: black;
+      font-weight: 200;
+}
+
+.submit-btn {
+      display: block;
+      color: black;
+      border: 3px solid black;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 2.5rem 0 0 11.5rem;
+      padding: 5px;
+      flex: 1 1;
+}
+.submit-btn:hover {
+      color: #808080;
+      border-color: #808080;
+}
+.submit-btn:active {
+      color: darkgray;
+      border-color: darkgray;
+}
+
+.form-input:valid {
+      background-color: rgba(135, 206, 235, 0.5);
+}
+.form-input:invalid {
+      background-color: rgba(139, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 741px) {
+      .submit-btn {
+            margin-left: 0;
+      }
+}
