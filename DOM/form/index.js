@@ -5,7 +5,7 @@ const formData = {};
 
 form.onsubmit = e => {
       e.preventDefault();
-      packInfo(obj);
+      packInfo(formData);
 };
 
 function packInfo(obj) {

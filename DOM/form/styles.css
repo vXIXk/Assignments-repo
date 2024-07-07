@@ -12,7 +12,7 @@ body {
       background-color: #076a4b;
 }
 
-section {
+.form-box {
       margin: 4rem auto;
       min-height: 75vh;
       max-width: 75vw;
@@ -21,21 +21,20 @@ section {
       padding: 4rem 3.5rem;
       color: white;
 }
-
-h1 {
+.form-heading {
       font-weight: 900;
       font-size: 2rem;
 }
-p {
+.form-intro {
       margin: 1.5rem 0 3rem;
 }
 
-form {
+.form {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
 }
-label,
+.form-label,
 .user-name,
 .phone-number {
       display: flex;
@@ -46,20 +45,8 @@ label,
 .label-caption {
       flex: 0 1 10rem;
 }
-.form-input,
-.user-name,
-.phone-number,
-textarea {
-      flex: 1 1 5rem;
-}
-
-.form-input,
-button {
-      font-family: inherit;
-      font-size: inherit;
-      background: transparent;
-}
 .form-input {
+      flex: 1 1 5rem;
       border: none;
       padding: 0 1rem;
 }
@@ -67,7 +54,19 @@ button {
       color: black;
       font-weight: 200;
 }
+.form-input:valid {
+      background-color: rgba(135, 206, 235, 0.5);
+}
+.form-input:invalid {
+      background-color: rgba(139, 0, 0, 0.5);
+}
 
+.form-input,
+.submit-btn {
+      font-family: inherit;
+      font-size: inherit;
+      background: transparent;
+}
 .submit-btn {
       display: block;
       color: black;
@@ -85,13 +84,6 @@ button {
 .submit-btn:active {
       color: darkgray;
       border-color: darkgray;
-}
-
-.form-input:valid {
-      background-color: rgba(135, 206, 235, 0.5);
-}
-.form-input:invalid {
-      background-color: rgba(139, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 741px) {
