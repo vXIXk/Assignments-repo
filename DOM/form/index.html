@@ -1,129 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-      <head>
-            <meta charset="UTF-8" />
-            <meta
-                  name="viewport"
-                  content="width=device-width, initial-scale=1.0"
-            />
-            <link rel="stylesheet" href="./reset.css" />
-            <link rel="stylesheet" href="./styles.css" />
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link
-                  rel="preconnect"
-                  href="https://fonts.gstatic.com"
-                  crossorigin
-            />
-            <link
-                  href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap"
-                  rel="stylesheet"
-            />
-            <link
-                  rel="stylesheet"
-                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-                  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-                  crossorigin="anonymous"
-                  referrerpolicy="no-referrer"
-            />
-            <title>Contact form</title>
-            <script defer src="./index.js"></script>
-      </head>
-      <body>
-            <section class="form-box">
-                  <header>
-                        <h1 class="form-heading">Contact form</h1>
-                        <p class="form-intro">
-                              Please fill in your information and we'll be
-                              sending your order.
-                        </p>
-                  </header>
-                  <form class="form" action="" method="">
-                        <label class="form-label">
-                              <span class="label-caption">Your name</span>
-                              <div class="user-name">
-                                    <input
-                                          autofocus
-                                          required
-                                          class="form-input"
-                                          type="text"
-                                          name="first-name"
-                                          pattern="[A-Z][a-z]*"
-                                          minlength="2"
-                                          maxlength="33"
-                                          placeholder="first name"
-                                    />
-                                    <input
-                                          required
-                                          class="form-input"
-                                          type="text"
-                                          name="last-name"
-                                          pattern="[A-Z][a-z]{1,31}(-[A-Z][a-z]{1,31})?"
-                                          minlength="2"
-                                          maxlength="65"
-                                          placeholder="last name"
-                                    />
-                              </div>
-                        </label>
-                        <label class="form-label">
-                              <span class="label-caption">Your email</span>
-                              <input
-                                    required
-                                    class="form-input"
-                                    type="email"
-                                    name="email"
-                                    placeholder="your_mail@mail.com"
-                              />
-                        </label>
-                        <label class="form-label">
-                              <span class="label-caption">Phone *</span>
-                              <div class="phone-number">
-                                    <input
-                                          class="form-input"
-                                          name="area-code"
-                                          pattern="\d{3}"
-                                          placeholder="000"
-                                    />
-                                    <input
-                                          class="form-input"
-                                          name="prefix"
-                                          pattern="\d{3}"
-                                          placeholder="000"
-                                    />
-                                    <input
-                                          class="form-input"
-                                          name="line-number"
-                                          pattern="\d{2}-?\d{2}"
-                                          placeholder="0000"
-                                    />
-                              </div>
-                        </label>
-                        <label class="form-label">
-                              <span class="label-caption"
-                                    >Message subject *</span
-                              >
-                              <select class="form-input" name="message-subject">
-                                    <option value="feedback">Feedback</option>
-                                    <option value="partnership">
-                                          Partnership
-                                    </option>
-                                    <option value="complaint">Complaint</option>
-                                    <option value="other">Other</option>
-                              </select>
-                        </label>
-                        <label class="form-label">
-                              <span class="label-caption">Message *</span>
-                              <textarea
-                                    class="form-input"
-                                    name="message"
-                                    rows="5"
-                                    minlength="50"
-                                    maxlength="500"
-                              ></textarea>
-                        </label>
-                        <button class="submit-btn" type="submit">
-                              Submit form
-                        </button>
-                  </form>
-            </section>
-      </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./reset.css" />
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Contact form</title>
+        <script defer src="./index.js"></script>
+    </head>
+    <body>
+        <section class="form-box">
+            <header>
+                <h1 class="form-heading">Contact form</h1>
+                <p class="form-intro">
+                    Please fill in your information and we'll be sending your
+                    order.
+                </p>
+            </header>
+            <form class="form" action="" method="">
+                <label class="form-label">
+                    <span class="label-caption">Your name</span>
+                    <div class="input-box">
+                        <input
+                            autofocus
+                            required
+                            class="form-input"
+                            type="text"
+                            name="first-name"
+                            pattern="[A-Z][a-z]*"
+                            minlength="2"
+                            maxlength="33"
+                            placeholder="first name"
+                        />
+                        <input
+                            required
+                            class="form-input"
+                            type="text"
+                            name="last-name"
+                            pattern="[A-Z][a-z]{1,31}(-[A-Z][a-z]{1,31})?"
+                            minlength="2"
+                            maxlength="65"
+                            placeholder="last name"
+                        />
+                    </div>
+                </label>
+                <label class="form-label">
+                    <span class="label-caption">Your email</span>
+                    <div class="input-box">
+                        <input
+                            required
+                            class="form-input"
+                            type="email"
+                            name="email"
+                            placeholder="your_mail@mail.com"
+                        />
+                    </div>
+                </label>
+                <label class="form-label">
+                    <span class="label-caption">Phone *</span>
+                    <div class="input-box">
+                        <input
+                            class="form-input"
+                            name="area-code"
+                            pattern="\d{3}"
+                            placeholder="000"
+                        />
+                        <input
+                            class="form-input"
+                            name="prefix"
+                            pattern="\d{3}"
+                            placeholder="000"
+                        />
+                        <input
+                            class="form-input"
+                            name="line-number"
+                            pattern="\d{2}-?\d{2}"
+                            placeholder="0000"
+                        />
+                    </div>
+                </label>
+                <label class="form-label">
+                    <span class="label-caption">Message subject *</span>
+                    <div class="input-box">
+                        <select class="form-input" name="message-subject">
+                            <option value="feedback">Feedback</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </label>
+                <label class="form-label">
+                    <span class="label-caption">Message *</span>
+                    <div class="input-box">
+                        <textarea
+                            class="form-input"
+                            name="message"
+                            rows="5"
+                            minlength="50"
+                            maxlength="500"
+                        ></textarea>
+                    </div>
+                </label>
+                <button class="submit-btn" type="submit">Submit form</button>
+            </form>
+        </section>
+    </body>
 </html>
