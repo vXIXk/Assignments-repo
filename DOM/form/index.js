@@ -2,7 +2,7 @@
 
 const form = document.querySelector("form");
 
-e.target.onsubmit = e => {
+form.onsubmit = e => {
     e.preventDefault();
 
     const formData = packInfo(e.target);
